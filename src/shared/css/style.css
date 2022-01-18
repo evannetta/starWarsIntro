@@ -50,7 +50,7 @@ body {
 
 .headline{
   font-family: starWarsHeadFont;
-  color: #e8ae15;
+  color: #cc8c00;
   font-size: 30px;
   line-height: 0.72;
   width: min-content;
@@ -62,7 +62,7 @@ body {
   opacity: 0;
 }
 
-.wrapper{
+.intro-wrapper{
   width: 100%;
   height: 90%;
   position: relative;

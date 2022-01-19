@@ -13,6 +13,7 @@ export default class Banner {
       gsap.registerPlugin(GSDevTools);
       GSDevTools.create({animation: this.animation.getTimeline(), globalSync: false});
     }
+
   }
 
   setAnimation(animation){
@@ -20,7 +21,6 @@ export default class Banner {
   }
 
   handleExit = () => {
-    window.open(window.clickTag, '_blank');
     this.animation.getTimeline().progress(1);
   };
 
@@ -47,7 +47,6 @@ export default class Banner {
 
   async start() {
     await this.init();
-
     this.animation.play();
   }
 }

@@ -47,7 +47,6 @@ body {
   background-color: #000000;
 }
 
-
 .headline{
   font-family: starWarsHeadFont;
   color: #cc8c00;
@@ -95,6 +94,20 @@ body {
   font-size: 20px;
   font-family: starWarsIntroFont;
   color: #cc8c00;
+}
+
+.sky{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+}
+
+.star{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border-radius: 0.5px;
 }
 
 

@@ -12,6 +12,31 @@ export default class Animation extends FrameAnimation {
     this.container = container;
   }
 
+  createStars = () =>{
+    const sky = document.querySelector('.sky');
+    let stars = [];
+    let starsColors = ['antiquewhite', 'darkgray', 'gray', 'slategray'];
+    let star;
+    for( let index = 0; index < 300; index++) {
+      stars.push(
+        { color: starsColors[index % starsColors.length],
+          top: Math.floor(Math.random() * 700),
+          left: Math.floor(Math.random() * 970),
+          scale:  Math.random() * 2 ,
+        });
+      star = document.createElement("div");
+      star.className = 'star';
+      star.style.top = stars[index].top + 'px';
+      star.style.left = stars[index].left + 'px';
+      star.style.backgroundColor = stars[index].color;
+      star.style.transform = `scale(${stars[index].scale})`;
+      sky.appendChild(star);
+    };
+    
+    
+  }
+
+
   /**
    *
    * @param {gsap.core.Timeline} tl
@@ -21,9 +46,12 @@ export default class Animation extends FrameAnimation {
     .to('.headline', {opacity: 1, duration: 0.2, delay: 1})
     .from('.headline', {scale: 15, duration: 12, ease: "sine.inOut"}, '>')
     .to('.headline', {opacity: 0, duration: 1}, '>-1')
-    // .fromTo('intro-wrapper', .05, {css:{autoAlpha:0}}, {css:{autoAlpha:1}, immediateRender:true})
     .set('.plane', {css:{rotateX: 45}, ease:Power2.easeOut}, '<-4')
     .to('.intro-text', 50, { top: -550, ease: 'none'}, '<')
     .to('.intro-text', 3, { opacity: 0, ease:Power2.easeOut}, '>-3')
+    .to('.sky', 10, {scale: 1.3, ease: 'none'}, '>')
+    .to('.star',10, {y: '-=100', onStart : this.createStars()}, '<')
+    .to('.sky', 1, {opacity: 0, ease: 'none'}, '>-1')
+  
   }
 }

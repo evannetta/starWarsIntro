@@ -50,8 +50,8 @@ export default class Animation extends FrameAnimation {
     .to('.intro-text', 50, { top: -550, ease: 'none'}, '<')
     .to('.intro-text', 3, { opacity: 0, ease:Power2.easeOut}, '>-3')
     
-    .to('.star', 8, {y: "random(-10, -100, 2)", z: "random(0, -100, 10)", ease: "sine.inOut", onStart : this.createStars()}, '>')
-    .to('.sky', 8, {scaleX: 1.1, ease: "sine.inOut"}, '<')
+    .to('.star', 8, {y: "random(0, -100, 2)", z: "random(0, -100, 10)", x: "random(0, 20, 2)", ease: "sine.inOut", onStart : this.createStars()}, '>-1')
+    .to('.sky', 8, {scaleX: 1.1, rotateX: '-=15', ease: "sine.inOut"}, '<')
     .to('.sky', 1, {opacity: 0, ease: "sine.inOut"}, '>-1')
   }
 }

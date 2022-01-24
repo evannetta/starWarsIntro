@@ -49,9 +49,9 @@ export default class Animation extends FrameAnimation {
     .set('.plane', {css:{rotateX: 45}, ease:Power2.easeOut}, '<-4')
     .to('.intro-text', 50, { top: -550, ease: 'none'}, '<')
     .to('.intro-text', 3, { opacity: 0, ease:Power2.easeOut}, '>-3')
-    .to('.sky', 10, {scale: 1.3, ease: 'none'}, '>')
-    .to('.star',10, {y: '-=100', onStart : this.createStars()}, '<')
-    .to('.sky', 1, {opacity: 0, ease: 'none'}, '>-1')
-  
+    
+    .to('.star', 8, {y: "random(-10, -100, 2)", z: "random(0, -100, 10)", ease: "sine.inOut", onStart : this.createStars()}, '>')
+    .to('.sky', 8, {scaleX: 1.1, ease: "sine.inOut"}, '<')
+    .to('.sky', 1, {opacity: 0, ease: "sine.inOut"}, '>-1')
   }
 }

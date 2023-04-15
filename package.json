@@ -8,15 +8,11 @@
     "npm": ">= 14.9.0"
   },
   "scripts": {
-    "dev": "rds-dev",
-    "build": "rds-build",
-    "preview": "./node_modules/.bin/henk"
+    "dev": "lite-server",
+    "build": "rds-build"
   },
   "license": "ISC",
   "dependencies": {
-    "@mediamonks/henk": "^1.1.1",
-    "@mediamonks/richmedia-temple-server": "^7.4.1",
-    "@mediamonks/temple": "^6.1.0",
-    "gsap": "file:gsap-bonus.tgz"
+    "lite-server": "^2.6.1"
   }
 }

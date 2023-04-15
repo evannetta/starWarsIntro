@@ -6,14 +6,6 @@
   font-family: starWarsIntroFont;
   src: url(../font/SF-Distant-Galaxy.woff);
 }
-:root {
-  --red: #d51b28;
-  --grey: #221f1f;
-  --white: #221f1f;
-
-  --width: var(--settings-size-width)px;
-  --height: var(--settings-size-height)px;
-}
 
 html {
   box-sizing: border-box;
@@ -28,7 +20,7 @@ html {
 }
 
 body {
-  background-color: var(--content-bgcolor);
+  background-color:rgb(255 239 189 / 90%);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -39,12 +31,20 @@ body {
   border: 1px solid #000000;
 }
 
+.centered{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .content {
   position: relative;
   overflow: hidden;
-  width: var(--width);
-  height: var(--height);
+  width: 970px;
+  height: 600px;
   background-color: #000000;
+  opacity: 0.8;
+  box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.6);
 }
 
 .headline{
@@ -58,7 +58,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  opacity: 0;
+  opacity: 1;
 }
 
 .intro{
@@ -103,4 +103,22 @@ body {
   border-radius: 0.5px;
 }
 
+.button{
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.6);
+  border-radius: 10%;
+}
 
+#cta{
+  width: 100px;
+  height: 100px;
+}
+
+.play, .pause{
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  display: none;
+}

@@ -1,1 +1,1 @@
-Here is the [Star Wars Intro](https://evannetta.github.io/starWarsIntro/) which was made using GSAP animation
+The [Star Wars Intro](https://evannetta.github.io/starWarsIntro/) was developed using GSAP animation.
